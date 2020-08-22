@@ -3,8 +3,10 @@
 var $window = $(window),
     $document = $(document),
     $wrapper = $(".wrapper");
+var breakpoint;
 $document.ready(function () {
   init();
+  breakpoint = +prompt("breakpoint", "700");
   docMouseClick();
   topMenu();
   browserResize();
@@ -58,28 +60,43 @@ function docMouseClick() {
 }
 
 function topMenu() {
-  var scrollTop = $document.scrollTop();
-  $document.scroll(function () {
-    console.clear();
-    var newScrollTop = $document.scrollTop();
+  if ($window.width() >= breakpoint) {
+    var scrollTop = $document.scrollTop();
+    $document.scroll(function () {
+      console.clear();
+      var newScrollTop = $document.scrollTop();
 
-    if (newScrollTop >= scrollTop) {
-      if (!$wrapper.hasClass("active")) {
-        $wrapper.addClass("active");
+      if (newScrollTop >= scrollTop) {
+        if (!$wrapper.hasClass("active")) {
+          $wrapper.addClass("active");
+        }
+      } else {
+        $wrapper.removeClass("active");
       }
-    } else {
-      $wrapper.removeClass("active");
-    }
 
-    scrollTop = newScrollTop;
-  });
+      scrollTop = newScrollTop;
+    });
+  }
 }
 
 function browserResize() {
-  var breakpoint = +prompt("breakpoint", "700");
+  var wasActive;
   $window.resize(function (e) {
     console.clear();
     var curWindowWidth = $window.width();
-    console.log(curWindowWidth); // alert(curWindowWidth);
+    console.log(curWindowWidth, breakpoint);
+    var isActive = $wrapper.hasClass("active");
+
+    if (isActive) {
+      if ($window.width() < breakpoint) {
+        $wrapper.removeClass("active");
+        wasActive = true;
+      }
+    } else {
+      if ($window.width() >= breakpoint && wasActive) {
+        $wrapper.addClass("active");
+        wasActive = false;
+      }
+    }
   });
 }

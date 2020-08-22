@@ -1,12 +1,17 @@
 "use strict";
 
-const 
+const
   $window = $(window),
   $document = $(document),
   $wrapper = $(".wrapper");
 
+let
+  breakpoint;
+
 $document.ready(function () {
   init();
+
+  breakpoint = +prompt("breakpoint", "700");
 
   docMouseClick();
 
@@ -17,7 +22,7 @@ $document.ready(function () {
 
 function init() {
   console.log("start");
-  
+
   $(".pets").css("background-color", "lightblue");
 }
 
@@ -70,33 +75,48 @@ function docMouseClick() {
 }
 
 function topMenu() {
-  let scrollTop = $document.scrollTop();
+  if ($window.width() >= breakpoint) {
+    let scrollTop = $document.scrollTop();
 
-  $document.scroll(() => {
-    console.clear();
+    $document.scroll(() => {
+      console.clear();
 
-    let newScrollTop = $document.scrollTop();
-    if (newScrollTop >= scrollTop) {
-      if (!$wrapper.hasClass("active")) {
-        $wrapper.addClass("active");
+      let newScrollTop = $document.scrollTop();
+      if (newScrollTop >= scrollTop) {
+        if (!$wrapper.hasClass("active")) {
+          $wrapper.addClass("active");
+        }
+      } else {
+        $wrapper.removeClass("active");
       }
-    } else {
-      $wrapper.removeClass("active");
-    }
 
-    scrollTop = newScrollTop;
-  });
+      scrollTop = newScrollTop;
+    });
+  }
 }
 
 function browserResize() {
-  const breakpoint = +prompt("breakpoint", "700");
+  let
+    wasActive;
 
   $window.resize(e => {
     console.clear();
+
     const curWindowWidth = $window.width();
-  
-    console.log(curWindowWidth);
-    
-    // alert(curWindowWidth);
+    console.log(curWindowWidth, breakpoint);
+
+    const isActive = $wrapper.hasClass("active");
+
+    if (isActive) {
+      if ($window.width() < breakpoint) {
+        $wrapper.removeClass("active");
+        wasActive = true;
+      }
+    } else {
+      if ($window.width() >= breakpoint && wasActive) {
+        $wrapper.addClass("active");
+        wasActive = false;
+      }
+    }
   });
 }
