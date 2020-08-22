@@ -1,11 +1,13 @@
 "use strict";
 
-var $document = $(document),
+var $window = $(window),
+    $document = $(document),
     $wrapper = $(".wrapper");
 $document.ready(function () {
   init();
   docMouseClick();
   topMenu();
+  browserResize();
 });
 
 function init() {
@@ -70,5 +72,15 @@ function topMenu() {
     }
 
     scrollTop = newScrollTop;
+  });
+}
+
+function browserResize() {
+  var breakpoint = +prompt("breakpoint", "700");
+  $window.resize(function (e) {
+    console.clear();
+    var curWindowWidth = $window.width();
+    console.log(curWindowWidth);
+    alert(curWindowWidth);
   });
 }
