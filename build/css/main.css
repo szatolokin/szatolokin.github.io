@@ -396,7 +396,7 @@ body .wrapper::before {
   transition: 0.25s;
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 600px) {
   body .wrapper.active::before {
     opacity: 1;
     transform: translateY(0);
