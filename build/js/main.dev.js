@@ -60,9 +60,9 @@ function docMouseClick() {
 }
 
 function topMenu() {
-  if ($window.width() >= breakpoint) {
-    var scrollTop = $document.scrollTop();
-    $document.scroll(function () {
+  var scrollTop = $document.scrollTop();
+  $document.scroll(function () {
+    if ($window.width() >= breakpoint) {
       console.clear();
       var newScrollTop = $document.scrollTop();
 
@@ -75,8 +75,8 @@ function topMenu() {
       }
 
       scrollTop = newScrollTop;
-    });
-  }
+    }
+  });
 }
 
 function browserResize() {
