@@ -97,6 +97,6 @@ function browserResize() {
   
     console.log(curWindowWidth);
     
-    alert(curWindowWidth);
+    // alert(curWindowWidth);
   });
 }

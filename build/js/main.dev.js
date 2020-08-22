@@ -80,7 +80,6 @@ function browserResize() {
   $window.resize(function (e) {
     console.clear();
     var curWindowWidth = $window.width();
-    console.log(curWindowWidth);
-    alert(curWindowWidth);
+    console.log(curWindowWidth); // alert(curWindowWidth);
   });
 }
