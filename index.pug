@@ -10,11 +10,9 @@ html(lang="ru")
     link(rel="stylesheet", href="css/main.css")
   body
     .wrapper
-      - for (let i = 0; i < 20; i++)
-        ul.pets
-          each pet in pets
-            +pet(pet)
+      +h(pageTitle)
 
     block scripts
       script(src="js/modules/jquery.min.js")
+      
       script(src="js/main.dev.js")

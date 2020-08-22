@@ -1,2 +1,15 @@
-mixin pet(name)
-  li.pet=name
+mixin h(text, className, num)
+  if text
+    case num
+      when 2
+        h2(class=className)=text
+      when 3
+        h3(class=className)=text
+      when 4
+        h4(class=className)=text
+      when 5
+        h5(class=className)=text
+      when 6
+        h6(class=className)=text
+      default
+        h1(class=className)=text
