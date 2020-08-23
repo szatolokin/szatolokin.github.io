@@ -1,3 +1,5 @@
 "use strict";
 
-$(document).ready(function () {});
+$(document).ready(function () {
+  alert($(window).width());
+});
