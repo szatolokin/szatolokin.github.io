@@ -349,6 +349,38 @@ html {
   padding: 0;
 }
 
+@keyframes move {
+  0% {
+    top: 0;
+    left: 0;
+    background-color: lime;
+  }
+  25% {
+    top: 0;
+    left: 200px;
+    animation-timing-function: linear;
+    transform: rotate(45deg);
+  }
+  50% {
+    top: 200px;
+    left: 200px;
+    transform: rotate(90deg);
+  }
+  75% {
+    top: 200px;
+    left: 0;
+    background-color: magenta;
+    animation-timing-function: linear;
+    transform: rotate(135deg);
+  }
+  100% {
+    top: 0;
+    left: 0;
+    background-color: lime;
+    transform: rotate(360deg);
+  }
+}
+
 body {
   background-color: whitesmoke;
 }
@@ -360,4 +392,29 @@ body .wrapper {
   max-width: 768px;
   min-width: 320px;
   min-height: 100vh;
+}
+
+body .wrapper .checkbox-input {
+  width: 20px;
+  height: 20px;
+}
+
+body .wrapper .checkbox-input:checked ~ .block {
+  animation: move 2s 1;
+  color: red;
+}
+
+body .wrapper .checkbox-label {
+  cursor: pointer;
+  user-select: none;
+}
+
+body .wrapper .block {
+  width: 100px;
+  height: 100px;
+  background-color: lightslategray;
+  margin-top: 100px;
+  border-radius: 10px;
+  position: relative;
+  transition: 0.1s;
 }
