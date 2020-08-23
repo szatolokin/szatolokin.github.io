@@ -1,12 +1,6 @@
 @import "mixin/css/global";
 @import "mixin/css/variables";
 
-@keyframes moving {
-  100% {
-    transform: translateX(100%);
-  }
-}
-
 body {
   background-color: whitesmoke;
 
@@ -18,39 +12,24 @@ body {
     min-width: 320px;
     min-height: 100vh;
 
-    .panel {
-      margin: 15px;
-      border: 1px solid black;
-      background-color: lightgreen;
-      width: 70px;
-      overflow: hidden;
-      transition-duration: 0.25s;
-
-      .mover {
-        display: flex;
-        width: 200%;
-
-        .text {
-          padding-right: 10px;
-          flex-grow: 1;
-          line-height: 50px;
-          animation: moving 0.75s linear infinite;
-          transition-duration: 0.25s;
-
-          &:last-of-type {
-            position: relative;
-            right: 100%;
-          }
-        }
+    .swiper {
+      &-container {
+        width: 100%;
+        // height: 300px;
+        margin: 0 auto;
+        border: 1px solid black;
+        background-color: lightgreen;
+        transition: 0.25s;
       }
 
-      &:hover {
-        width: 300px;
+      &-pagination {
+        position: unset;
 
-        .mover {
-          .text {
-            line-height: 100px;
-          }
+        &-bullet {
+          display: inline-block;
+          margin: 10px;
+          width: 20px;
+          height: 20px;
         }
       }
     }

@@ -14,11 +14,25 @@ html(lang="ru")
 
   body
     .wrapper
-      .panel
-        .mover
-          .text привет
-          .text привет
+      .swiper-container
+        .swiper-wrapper
+          .swiper-slide
+            img(src="img/image.png").image
+          .swiper-slide
+            img(src="img/image.png").image
+          .swiper-slide
+            img(src="img/image.png").image
+
+        //- .swiper-pagination
+
+        .swiper-button-prev
+        .swiper-button-next
+
+        .swiper-scrollbar
+      .swiper-pagination
 
     block scripts
-      script(src="js/modules/jquery.min.js") 
+      script(src="js/modules/jquery.min.js")
+      script(src="js/modules/swiper-bundle.min.js")
+
       script(src="js/main.dev.js")
