@@ -1,39 +1,9 @@
 @import "mixin/css/global";
 @import "mixin/css/variables";
 
-@keyframes move {
-  0% {
-    top: 0;
-    left: 0;
-    background-color: lime;
-  }
-
-  25% {
-    top: 0;
-    left: 200px;
-    animation-timing-function: linear;
-    transform: rotate(45deg);
-  }
-
-  50% {
-    top: 200px;
-    left: 200px;
-    transform: rotate(90deg);
-  }
-
-  75% {
-    top: 200px;
-    left: 0;
-    background-color: magenta;
-    animation-timing-function: linear;
-    transform: rotate(135deg);
-  }
-
+@keyframes moving {
   100% {
-    top: 0;
-    left: 0;
-    background-color: lime;
-    transform: rotate(360deg);
+    transform: translateX(100%);
   }
 }
 
@@ -48,33 +18,41 @@ body {
     min-width: 320px;
     min-height: 100vh;
 
-    .checkbox {
-      &-input {
-        width: 20px;
-        height: 20px;
+    .panel {
+      margin: 15px;
+      border: 1px solid black;
+      background-color: lightgreen;
+      width: 70px;
+      overflow: hidden;
+      transition-duration: 0.25s;
 
-        &:checked {
-          &~.block {
-            animation: move 2s 1;
-            color: red;
+      .mover {
+        display: flex;
+        width: 200%;
+
+        .text {
+          padding-right: 10px;
+          flex-grow: 1;
+          line-height: 50px;
+          animation: moving 0.75s linear infinite;
+          transition-duration: 0.25s;
+
+          &:last-of-type {
+            position: relative;
+            right: 100%;
           }
         }
       }
 
-      &-label {
-        cursor: pointer;
-        user-select: none;
-      }
-    }
+      &:hover {
+        width: 300px;
 
-    .block {
-      width: 100px;
-      height: 100px;
-      background-color: lightslategray;
-      margin-top: 100px;
-      border-radius: 10px;
-      position: relative;
-      transition: 0.1s;
+        .mover {
+          .text {
+            line-height: 100px;
+          }
+        }
+      }
     }
   }
 }
