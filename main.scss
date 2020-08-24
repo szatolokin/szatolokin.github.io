@@ -10,9 +10,11 @@
   right: 0;
   background: transparent;
   transition: $duration;
+  pointer-events: none;
 
   &.active {
     background-color: rgba(0, 0, 0, 0.4);
+    pointer-events: unset;
   }
 }
 
@@ -156,11 +158,25 @@ body {
       }
     }
 
+    .swiper-container {
+      width: 100%;
+
+      .swiper-wrapper {
+        .swiper-slide {
+          a {
+            display: block;
+          }
+        }
+      }
+    }
+
     .block {
       width: 100px;
       height: 100px;
       background-color: lightgreen;
       margin: 15px;
+      word-break: break-all;
+      text-align: center;
 
       &:nth-child(even) {
         width: 150px;

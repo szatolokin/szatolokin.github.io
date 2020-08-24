@@ -28,57 +28,28 @@ html(lang="ru")
             button.menu-drop-search-btn Найти
       .menu-btn
 
+      .swiper-container
+        .swiper-wrapper
+          .swiper-slide
+            a(href="img/image.png", data-fancybox="gallery")
+              img(src="img/image.png")
+          .swiper-slide
+            a(href="img/svg.svg", data-fancybox="gallery")
+              img(src="img/svg.svg")
+          .swiper-slide
+            a(href="img/image.png", data-fancybox="gallery")
+              img(src="img/image.png")
+
+        .swiper-pagination
+
+        .swiper-button-prev
+        .swiper-button-next
+
+        .swiper-scrollbar
+
       .blocks
-        .block
-        .block
-        .block
-        .block
-        .block
-        .block
-        .block
-        .block
-        .block
-        .block
-        .block
-        .block
-        .block
-        .block
-        .block
-        .block
-        .block
-        .block
-        .block
-        .block
-        .block
-        .block
-        .block
-        .block
-        .block
-        .block
-        .block
-        .block
-        .block
-        .block
-        .block
-        .block
-        .block
-        .block
-        .block
-        .block
-        .block
-        .block
-        .block
-        .block
-        .block
-        .block
-        .block
-        .block
-        .block
-        .block
-        .block
-        .block
-        .block
-        .block
+        - for (let i = 0; i < 30; i++)
+          .block=i ** 10
 
     block scripts
       script(src="js/modules/jquery.min.js")

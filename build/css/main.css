@@ -11,7 +11,8 @@ html {
   outline: none;
 }
 
-img {
+img,
+svg {
   display: block;
   max-width: 100%;
 }
@@ -25,10 +26,12 @@ img {
   right: 0;
   background: transparent;
   transition: 0.25s;
+  pointer-events: none;
 }
 
 .shadow.active {
   background-color: rgba(0, 0, 0, 0.4);
+  pointer-events: unset;
 }
 
 body {
@@ -169,11 +172,21 @@ body .wrapper .menu-drop-search form .menu-drop-search-btn:hover {
   background-color: #858585;
 }
 
+body .wrapper .swiper-container {
+  width: 100%;
+}
+
+body .wrapper .swiper-container .swiper-wrapper .swiper-slide a {
+  display: block;
+}
+
 body .wrapper .block {
   width: 100px;
   height: 100px;
   background-color: lightgreen;
   margin: 15px;
+  word-break: break-all;
+  text-align: center;
 }
 
 body .wrapper .block:nth-child(even) {
