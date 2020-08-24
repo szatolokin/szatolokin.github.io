@@ -45,7 +45,7 @@ body .wrapper {
 }
 
 body .wrapper .menu-btn {
-  position: absolute;
+  position: fixed;
   z-index: 100;
   top: 0;
   right: 0;
@@ -54,6 +54,10 @@ body .wrapper .menu-btn {
   border: 1px solid gray;
   background-color: #d0ffd0;
   transition: 0.25s;
+}
+
+body .wrapper .menu-btn:hover {
+  background-color: #a7ffa7;
 }
 
 body .wrapper .menu-btn::before, body .wrapper .menu-btn::after {
@@ -163,4 +167,16 @@ body .wrapper .menu-drop-search form .menu-drop-search-btn {
 
 body .wrapper .menu-drop-search form .menu-drop-search-btn:hover {
   background-color: #858585;
+}
+
+body .wrapper .block {
+  width: 100px;
+  height: 100px;
+  background-color: lightgreen;
+  margin: 15px;
+}
+
+body .wrapper .block:nth-child(even) {
+  width: 150px;
+  height: 70px;
 }

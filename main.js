@@ -28,13 +28,15 @@ function menu() {
 
   $(button).click(function () {
     if (isActive) {
-      $(button).addClass("active");
-      $(drop).addClass("active");
-      $(shadow).addClass("active");
-    } else {
       $(button).removeClass("active");
       $(drop).removeClass("active");
       $(shadow).removeClass("active");
+      $(document.body).css({ overflow: "" });
+    } else {
+      $(button).addClass("active");
+      $(drop).addClass("active");
+      $(shadow).addClass("active");
+      $(document.body).css({ overflow: "hidden" });
     }
 
     isActive = !isActive;
@@ -42,5 +44,16 @@ function menu() {
 
   $(searchBtn).click(function (e) {
     e.preventDefault();
+  });
+
+  $(shadow).click(function () {
+    if (isActive) {
+      $(button).removeClass("active");
+      $(drop).removeClass("active");
+      $(shadow).removeClass("active");
+      $(document.body).css({ overflow: "" });
+
+      isActive = false;
+    }
   });
 }

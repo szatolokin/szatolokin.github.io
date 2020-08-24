@@ -29,7 +29,7 @@ body {
 
     .menu {
       &-btn {
-        position: absolute;
+        position: fixed;
         z-index: 100;
         top: 0;
         right: 0;
@@ -38,6 +38,10 @@ body {
         border: 1px solid gray;
         background-color: rgb(208, 255, 208);
         transition: $duration;
+
+        &:hover {
+          background-color: rgb(167, 255, 167);
+        }
 
         &::before,
         &::after {
@@ -149,6 +153,18 @@ body {
             }
           }
         }
+      }
+    }
+
+    .block {
+      width: 100px;
+      height: 100px;
+      background-color: lightgreen;
+      margin: 15px;
+
+      &:nth-child(even) {
+        width: 150px;
+        height: 70px;
       }
     }
   }
