@@ -17,7 +17,16 @@ html(lang="ru")
       link(rel="stylesheet", href="css/main.css")
 
   body
+    .shadow
     .wrapper
+      .menu-drop.active
+        .menu-drop-title 
+          span Меню
+        .menu-drop-search
+          form
+            input(type="text", placeholder="Что ищете?")
+            button.menu-drop-search-btn Найти
+      .menu-btn.active
 
     block scripts
       script(src="js/modules/jquery.min.js")
