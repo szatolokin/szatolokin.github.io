@@ -1,0 +1,36 @@
+@import "mixin/css/variables";
+
+html {
+  box-sizing: border-box;
+  color: $black;
+  font-family: $font;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  outline: none;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+svg {
+  max-width: 100%;
+}
+
+a {
+  display: block;
+  height: 100%;
+  text-decoration: none;
+  color: $black;
+}
+
+ul {
+  list-style: none;
+}

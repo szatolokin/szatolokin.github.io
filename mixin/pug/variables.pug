@@ -1,2 +1,24 @@
 -
-  const pageTitle = "Test page";
+  const
+    PAGE = {
+      title: "Test page"
+    },
+    CSS = {
+      pathToMain: "css/main.css",
+      pathToNormalize: "css/normalize.css",
+      modulesDir: "css/modules/",
+      getPathToModule: function(moduleName) {
+        return this.modulesDir
+          + moduleName
+          + ".css";
+      }
+    },
+    JS = {
+      pathToMain: "js/main.dev.js",
+      modulesDir: "js/modules/",
+      getPathToModule: function(moduleName) {
+        return this.modulesDir
+          + moduleName
+          + ".js";
+      }
+    };

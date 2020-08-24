@@ -1,15 +1,16 @@
-mixin h(text, className, num)
-  if text
-    case num
-      when 2
-        h2(class=className)=text
-      when 3
-        h3(class=className)=text
-      when 4
-        h4(class=className)=text
-      when 5
-        h5(class=className)=text
-      when 6
-        h6(class=className)=text
-      default
-        h1(class=className)=text
+//- css
+mixin cssModule(moduleName)
+  link(rel="stylesheet", href=CSS.getPathToModule(moduleName))
+
+mixin cssMain
+  link(rel="stylesheet", href=CSS.pathToMain)
+
+mixin cssNormalize
+  link(rel="stylesheet", href=CSS.pathToNormalize)
+
+//- js
+mixin jsModule(moduleName)
+  script(src=JS.getPathToModule(moduleName))
+
+mixin jsMain
+  script(src=JS.pathToMain)

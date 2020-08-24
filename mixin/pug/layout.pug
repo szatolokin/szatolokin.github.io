@@ -1,0 +1,31 @@
+include variables
+include mixins
+
+doctype html
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+
+    title=PAGE.title
+
+    block styles
+      +cssModule("normalize")
+      +cssNormalize
+
+      +cssModule("swiper-bundle.min")
+      +cssModule("jquery.fancybox.min")
+      +cssModule("tooltipster.bundle.min")
+
+      +cssMain
+
+  body
+    block body
+
+    block scripts
+      +jsModule("jquery.min")
+      +jsModule("swiper-bundle.min")
+      +jsModule("jquery.fancybox.min")
+      +jsModule("tooltipster.bundle.min")
+
+      +jsMain
