@@ -1,7 +1,55 @@
+@font-face {
+  font-family: 'Circe';
+  font-display: swap;
+  src: url("../fonts/Circe-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Circe';
+  font-display: swap;
+  src: url("../fonts/Circe-ExtraLight.woff") format("woff");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Circe';
+  font-display: swap;
+  src: url("../fonts/Circe-Thin.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Circe';
+  font-display: swap;
+  src: url("../fonts/Circe-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Circe';
+  font-display: swap;
+  src: url("../fonts/Circe-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Circe';
+  font-display: swap;
+  src: url("../fonts/Circe-ExtraBold.woff") format("woff");
+  font-weight: 800;
+  font-style: normal;
+}
+
 html {
   box-sizing: border-box;
-  color: #0f0f0f;
-  font-family: sans-serif;
+  color: #373A36;
+  font-family: "Circe", sans-serif;
 }
 
 *,
@@ -26,7 +74,7 @@ a {
   display: block;
   height: 100%;
   text-decoration: none;
-  color: #0f0f0f;
+  color: #373A36;
 }
 
 ul {

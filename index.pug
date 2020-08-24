@@ -1,7 +1,211 @@
 extends mixin/pug/layout
 
 block body
+  .header-logo
+    img(src="img/logo.svg", alt="")
+  .header-contact
+    .header-contact-number 8 (800) 775-88-88
+    .header-contact-text Бесплатный звонок по России
+
   .wrapper
     header
       .h-inner
-        h1.header-title=PAGE.title
+        .header-background
+        h1.header-title
+          | Счет для бизнеса 
+          span бесплатно 
+          | и навсегда
+        .header-btn
+          a(href="#") ОТКРЫТЬ СЧЕТ
+    main
+      .m-inner
+        .main-block1
+          .main-block1-item
+            img(src="img/main-11.svg", alt="").main-block1-item-image
+            .main-block1-item-text Бесплатные платежи внутри банка 24/7
+          .main-block1-item
+            img(src="img/main-12.svg", alt="").main-block1-item-image
+            .main-block1-item-text Внешние платежи по ДБО 19/5
+          .main-block1-item
+            img(src="img/main-13.svg", alt="").main-block1-item-image
+            .main-block1-item-text Бесплатная проверка контрагентов
+          .main-block1-item
+            img(src="img/main-14.svg", alt="").main-block1-item-image
+            .main-block1-item-text Удобная карта для бизнеса в подарок
+        .main-block2
+          .main-block2-sticky
+            .main-block2-sticky-text Подробнее о тарифах
+            img(src="img/sticky.svg", alt="")
+          h2.main-block2-title Пакеты для любого бизнеса
+          .main-block2-top
+            .main-block2-top-left.block2-item
+              .block2-item-image
+                img(src="img/mask-left-top.svg", alt="")
+              .block2-item-title
+                span Сочный
+                span 0 ₽/мес
+              .block2-item-line
+              .block2-item-content
+                .block2-item-content-left
+                  .content-item
+                    .content-item-top 3 платежа
+                    .content-item-bottom контрагентам в другой банк
+                  .content-item
+                    .content-item-top Бизнес-карта
+                    .content-item-bottom +обслуживание первый год
+                .block2-item-content-right
+                  .content-item
+                    .content-item-top до 200 тыс ₽/мес
+                    .content-item-bottom переводы ФЛ внутри банка 
+              .block2-item-btn
+                a(href="#") ОТКРЫТЬ СЧЕТ
+
+            .main-block2-top-right.block2-item
+              .block2-item-image
+                img(src="img/mask-right-top.svg", alt="")
+              .block2-item-title
+                span Освежающий
+                span 500 ₽/мес
+              .block2-item-line
+              .block2-item-content
+                .block2-item-content-left
+                  .content-item
+                    .content-item-top 5 платежей
+                    .content-item-bottom контрагентам в другой банк
+                  .content-item
+                    .content-item-top до 200 тыс ₽/мес
+                    .content-item-bottom переводы в пользу ФЛ
+                .block2-item-content-right
+                  .content-item
+                    .content-item-top до 50 тыс ₽/мес
+                    .content-item-bottom прием наличных
+                  .content-item
+                    .content-item-top Бизнес-карта
+                    .content-item-bottom +обслуживание первый год
+              .block2-item-btn
+                a(href="#") ОТКРЫТЬ СЧЕТ
+
+          .main-block2-bottom
+            .main-block2-bottom-left.block2-item
+              .block2-item-image
+                img(src="img/mask-left-bottom.svg", alt="")
+              .block2-item-title
+                span Бодрящий
+                span 1 200 ₽/мес
+              .block2-item-line
+              .block2-item-content
+                .block2-item-content-left
+                  .content-item
+                    .content-item-top 15 платежей
+                    .content-item-bottom контрагентам в другой банк
+                  .content-item
+                    .content-item-top до 300 тыс ₽/мес
+                    .content-item-bottom переводы в пользу ФЛ 
+                  .content-item
+                    .content-item-top СМС-инфо по счету
+                    .content-item-bottom бесплатно
+                .block2-item-content-right
+                  .content-item
+                    .content-item-top до 100 тыс ₽/мес
+                    .content-item-bottom прием наличных
+                  .content-item
+                    .content-item-top Бизнес-карта
+                    .content-item-bottom +обслуживание первый год
+              .block2-item-btn
+                a(href="#") ОТКРЫТЬ СЧЕТ
+
+            .main-block2-bottom-right.block2-item
+              .block2-item-image
+                img(src="img/mask-right-bottom.svg", alt="")
+              .block2-item-title
+                span Полезный
+                span 2 500 ₽/мес
+              .block2-item-line
+              .block2-item-content
+                .block2-item-content-left
+                  .content-item
+                    .content-item-top 50 платежей
+                    .content-item-bottom контрагентам в другой банк
+                  .content-item
+                    .content-item-top до 300 тыс ₽/мес
+                    .content-item-bottom переводы в пользу ФЛ
+                  .content-item
+                    .content-item-top СМС-инфо по счету
+                    .content-item-bottom бесплатно
+                .block2-item-content-right
+                  .content-item
+                    .content-item-top без ограничений
+                    .content-item-bottom прием наличных
+                  .content-item
+                    .content-item-top Бизнес-карта
+                    .content-item-bottom +обслуживание первый год
+              .block2-item-btn
+                a(href="#") ОТКРЫТЬ СЧЕТ
+        .main-tabs
+          .main-tabs-panel
+            .main-tabs-panel-item(data-tab="1").active Бизнес-карта
+            .main-tabs-panel-item(data-tab="2") Интернет и Мобильный Банк
+            .main-tabs-panel-item(data-tab="3") Эквайринг
+            .main-tabs-panel-item(data-tab="4") Онлайн касса
+            .main-tabs-panel-item(data-tab="5") Полезные сервисы
+          .main-tabs-blocks
+            .main-tabs-blocks-wrapper
+              .main-tabs-blocks-wrapper-item(data-tab="1", data-info="card").active
+                .content-title 
+                  | Карта для бизнеса —
+                  | распоряжайтесь деньгами компании 24/7
+                .content-block
+                  .content-block-item Круглосуточный доступ к деньгам на счете
+                  .content-block-item Платите без комиссии
+                  .content-block-item Снимайте наличные
+                  .content-block-item Пользуйтесь специальными предложениями
+                .content-image
+                  img(src="img/cards.png", alt="")
+
+              .main-tabs-blocks-wrapper-item(data-tab="2", data-info="card")
+                .content-title 
+                  | Карта для бизнеса —
+                  | распоряжайтесь деньгами компании 24/7
+                .content-block
+                  .content-block-item Круглосуточный доступ к деньгам на счете
+                  .content-block-item Платите без комиссии
+                  .content-block-item Снимайте наличные
+                  .content-block-item Пользуйтесь специальными предложениями
+                .content-image
+                  img(src="img/cards.png", alt="")
+
+              .main-tabs-blocks-wrapper-item(data-tab="3", data-info="card")
+                .content-title 
+                  | Карта для бизнеса —
+                  | распоряжайтесь деньгами компании 24/7
+                .content-block
+                  .content-block-item Круглосуточный доступ к деньгам на счете
+                  .content-block-item Платите без комиссии
+                  .content-block-item Снимайте наличные
+                  .content-block-item Пользуйтесь специальными предложениями
+                .content-image
+                  img(src="img/cards.png", alt="")
+
+              .main-tabs-blocks-wrapper-item(data-tab="4", data-info="card")
+                .content-title 
+                  | Карта для бизнеса —
+                  | распоряжайтесь деньгами компании 24/7
+                .content-block
+                  .content-block-item Круглосуточный доступ к деньгам на счете
+                  .content-block-item Платите без комиссии
+                  .content-block-item Снимайте наличные
+                  .content-block-item Пользуйтесь специальными предложениями
+                .content-image
+                  img(src="img/cards.png", alt="")
+
+              .main-tabs-blocks-wrapper-item(data-tab="5", data-info="card")
+                .content-title 
+                  | Карта для бизнеса —
+                  | распоряжайтесь деньгами компании 24/7
+                .content-block
+                  .content-block-item Круглосуточный доступ к деньгам на счете
+                  .content-block-item Платите без комиссии
+                  .content-block-item Снимайте наличные
+                  .content-block-item Пользуйтесь специальными предложениями
+                .content-image
+                  img(src="img/cards.png", alt="")
