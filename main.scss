@@ -15,7 +15,6 @@ body {
     .swiper {
       &-container {
         width: 100%;
-        // height: 300px;
         margin: 0 auto;
         border: 1px solid black;
         background-color: lightgreen;
@@ -32,6 +31,13 @@ body {
           height: 20px;
         }
       }
+    }
+
+    .block {
+      width: 100px;
+      height: 100px;
+      background-color: lightsalmon;
+      margin: 15px;
     }
   }
 }

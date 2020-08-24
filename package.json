@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/szatolokin/szatolokin.github.io#readme",
   "dependencies": {
+    "@fancyapps/fancybox": "^3.5.7",
     "normalize.css": "^8.0.1",
     "swiper": "^6.1.2"
   }

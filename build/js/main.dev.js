@@ -2,6 +2,7 @@
 
 $(document).ready(function () {
   slider();
+  gallery();
 });
 
 function slider() {
@@ -18,5 +19,23 @@ function slider() {
       el: '.swiper-scrollbar'
     }
   });
-  $(".swiper-container").hover(function () {});
+}
+
+function gallery() {
+  var isActive = false;
+  $(".block").click(function () {
+    if (!isActive) {
+      $(".gallery").fancybox({});
+      isActive = true;
+      $(this).css("background-color", "lightgreen");
+    } else {
+      isActive = false;
+      $(this).css("background-color", "");
+    }
+  });
+  $(".gallery").click(function (event) {
+    if (!isActive) {
+      event.preventDefault();
+    }
+  });
 }

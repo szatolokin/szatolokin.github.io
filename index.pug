@@ -10,29 +10,40 @@ html(lang="ru")
     title=pageTitle
 
     block styles
+      link(rel="stylesheet", href="css/modules/normalize.css")
+      link(rel="stylesheet", href="css/modules/swiper-bundle.min.css")
+      link(rel="stylesheet", href="css/modules/jquery.fancybox.min.css")
+
       link(rel="stylesheet", href="css/main.css")
 
   body
     .wrapper
-      .swiper-container
-        .swiper-wrapper
-          .swiper-slide
-            img(src="img/image.png").image
-          .swiper-slide
-            img(src="img/image.png").image
-          .swiper-slide
-            img(src="img/image.png").image
+      //- .swiper-container
+      //-   .swiper-wrapper
+      //-     .swiper-slide
+      //-       a(href="img/image.png", data-fancybox="slider")
+      //-         img(src="img/image.png").image
+      //-     .swiper-slide
+      //-       a(href="img/image.png", data-fancybox="slider")
+      //-         img(src="img/image.png").image
+      //-     .swiper-slide
+      //-       a(href="img/image.png", data-fancybox="slider")
+      //-         img(src="img/image.png").image
 
-        //- .swiper-pagination
+      //-   .swiper-button-prev
+      //-   .swiper-button-next
 
-        .swiper-button-prev
-        .swiper-button-next
+      //-   .swiper-scrollbar
+      //- .swiper-pagination
 
-        .swiper-scrollbar
-      .swiper-pagination
+      a(href="img/image.png").gallery
+        img(src="img/svg.svg").image
+
+      .block
 
     block scripts
       script(src="js/modules/jquery.min.js")
       script(src="js/modules/swiper-bundle.min.js")
+      script(src="js/modules/jquery.fancybox.min.js")
 
       script(src="js/main.dev.js")
