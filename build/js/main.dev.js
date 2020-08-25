@@ -3,6 +3,7 @@
 window.onload = function () {
   sticker(".sticker", ".cards", ".tabs");
   tabs(".tabs-panel-item", ".tabs-content");
+  form(".form-block-input input");
 };
 
 function sticker(stickerSelector, startSelector, endSelector) {
@@ -50,5 +51,12 @@ function tabs(tabsSelector, contentSelector) {
       $(this).addClass("active");
       slider.slideTo($(this).data().index - 1);
     }
+  });
+}
+
+function form(inputSelector) {
+  var input = $(inputSelector);
+  input.inputmask({
+    "mask": "+7 (999) 999-9999"
   });
 }

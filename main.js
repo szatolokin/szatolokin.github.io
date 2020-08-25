@@ -4,6 +4,8 @@ window.onload = function () {
   sticker(".sticker", ".cards", ".tabs");
 
   tabs(".tabs-panel-item", ".tabs-content");
+
+  form(".form-block-input input");
 };
 
 function sticker(stickerSelector, startSelector, endSelector) {
@@ -25,7 +27,7 @@ function sticker(stickerSelector, startSelector, endSelector) {
 
     if (scrollY > startY && scrollY < endY) {
       sticker.offset({ top: scrollY + pos });
-      
+
       sticker.removeClass("non-active");
 
       stickyNow = true;
@@ -55,4 +57,11 @@ function tabs(tabsSelector, contentSelector) {
       slider.slideTo($(this).data().index - 1);
     }
   });
+}
+
+function form(inputSelector) {
+  const
+    input = $(inputSelector);
+
+  input.inputmask({"mask": "+7 (999) 999-9999"});
 }
