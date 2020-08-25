@@ -1,24 +1,80 @@
 extends mixin/pug/layout
 
 block body
-  .header-logo
-    img(src="img/logo.svg", alt="")
-  .header-contact
-    .header-contact-number 8 (800) 775-88-88
-    .header-contact-text Бесплатный звонок по России
-
   .wrapper
-    header
-      .h-inner
-        .header-background
+    header.header
+      .header-background
+        img(src="img/header-background.jpg", alt="")
+      .header-top
+        .header-top-logo
+          a(href="#")
+            img(src="img/logo.svg", alt="")
+        .header-top-contact
+          .header-top-contact-number 8 (800) 775-88-88
+          .header-top-contact-text Бесплатный звонок по России
+      .inner
         h1.header-title
-          | Счет для бизнеса 
-          span бесплатно 
-          | и навсегда
+          .header-title-part1 Счет для бизнеса
+          .header-title-part2
+            span.red бесплатно 
+            span и навсегда
         .header-btn
           a(href="#") ОТКРЫТЬ СЧЕТ
-    main
-      .m-inner
+
+    main.main
+      .info-top
+        .info-top-item
+          .info-top-item-image
+            img(src="img/main-11.svg", alt="")
+          .info-top-item-text Бесплатные платежи внутри банка 24/7
+        .info-top-item
+          .info-top-item-image
+            img(src="img/main-12.svg", alt="")
+          .info-top-item-text #{"Внешние платежи\nпо ДБО 19/5"}
+        .info-top-item
+          .info-top-item-image
+            img(src="img/main-13.svg", alt="")
+          .info-top-item-text Бесплатная проверка контрагентов
+        .info-top-item
+          .info-top-item-image
+            img(src="img/main-14.svg", alt="")
+          .info-top-item-text #{"Удобная карта\nдля бизнеса в подарок"}
+      .cards
+        .sticker
+          a(href="#").sticker-link #{"Подробнее\nо тарифах"}
+          .sticker-image
+            img(src="img/sticker.svg", alt="")
+        .inner
+      .tabs
+        .inner
+      .info-bottom
+        .inner
+          .info-bottom-title Три простых шага
+          .info-bottom-items
+            .info-bottom-items-item
+              .info-bottom-items-item-image
+                img(src="img/main-21.svg", alt="")
+              .info-bottom-items-item-text #{"Оставьте заявку\тна сайте"}
+            .info-bottom-items-item
+              .info-bottom-items-item-image
+                img(src="img/main-22.svg", alt="")
+              .info-bottom-items-item-text #{"Получите номер счёта\nи реквизиты"}
+            .info-bottom-items-item
+              .info-bottom-items-item-image
+                img(src="img/main-23.svg", alt="")
+              .info-bottom-items-item-text #{"Подпишите\nдокументы"}
+      .form
+
+    footer.footer
+      .inner
+        .footer-top Предложение действует для физических лиц (ИП) и юридических лиц (ООО) при открытии расчетного счета для ведения расчётно - кассового обслуживания (рко) в Азиатско-Тихоокеанском Банке (ПАО).
+        .footer-bottom
+          .footer-bottom-left © Азиатско-Тихоокеанский Банк (ПАО), 2007 - 2019
+          .footer-bottom-right
+            span Сделано в 
+            a(href="#") D'Terra
+
+      //- .m-inner
         .main-block1
           .main-block1-item
             img(src="img/main-11.svg", alt="").main-block1-item-image
