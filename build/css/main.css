@@ -20,52 +20,11 @@ body .wrapper .header-background {
   left: calc((1920px - 100%) / -2);
 }
 
-@media (max-width: 1280px) {
-  body .wrapper .header-background {
-    right: -330px;
-    left: unset;
-  }
-}
-
-@media (max-width: 1050px) {
-  body .wrapper .header-background {
-    right: -470px;
-    left: unset;
-  }
-}
-
-@media (max-width: 640px) {
-  body .wrapper .header-background {
-    right: -600px;
-    left: unset;
-  }
-}
-
 body .wrapper .header-top {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   padding: 30px 70px 0 70px;
-}
-
-@media (max-width: 1350px) {
-  body .wrapper .header-top {
-    padding-left: calc(70px - (1350px - 100%) / 2);
-    padding-right: calc(70px - (1350px - 100%) / 2);
-  }
-}
-
-@media (max-width: 1250px) {
-  body .wrapper .header-top {
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-}
-
-@media (max-width: 540px) {
-  body .wrapper .header-top {
-    display: block;
-  }
 }
 
 body .wrapper .header-top-logo {
@@ -90,23 +49,10 @@ body .wrapper .header-top-contact-text {
   line-height: 30px;
 }
 
-@media (max-width: 540px) {
-  body .wrapper .header-top-contact {
-    margin-top: 30px;
-    text-align: unset;
-  }
-}
-
 body .wrapper .header .inner {
   max-width: 1250px;
   margin: 0 auto;
   padding: 0 15px 100px 15px;
-}
-
-@media (max-width: 760px) {
-  body .wrapper .header .inner {
-    padding-bottom: 50px;
-  }
 }
 
 body .wrapper .header .inner .header-title {
@@ -115,27 +61,6 @@ body .wrapper .header .inner .header-title {
   font-size: 56px;
   line-height: 64px;
   font-weight: bold;
-}
-
-@media (max-width: 900px) {
-  body .wrapper .header .inner .header-title {
-    max-width: 500px;
-    margin-top: 80px;
-  }
-}
-
-@media (max-width: 760px) {
-  body .wrapper .header .inner .header-title {
-    max-width: 300px;
-    margin-top: 80px;
-  }
-}
-
-@media (max-width: 540px) {
-  body .wrapper .header .inner .header-title {
-    max-width: 300px;
-    margin-top: 50px;
-  }
 }
 
 body .wrapper .header .inner .header-title-part1, body .wrapper .header .inner .header-title-part2 {
@@ -154,18 +79,6 @@ body .wrapper .header .inner .header-btn {
   border-radius: 6px;
   transition: 0.25s;
   padding: 0 15px;
-}
-
-@media (max-width: 900px) {
-  body .wrapper .header .inner .header-btn {
-    margin-top: 100px;
-  }
-}
-
-@media (max-width: 540px) {
-  body .wrapper .header .inner .header-btn {
-    margin-top: 50px;
-  }
 }
 
 body .wrapper .header .inner .header-btn:hover {
@@ -651,6 +564,21 @@ body .wrapper .main .form-block-input input {
   text-align: center;
   font-size: 26px;
   color: #333333;
+  transition: 0.25s;
+}
+
+body .wrapper .main .form-block-input input.valid {
+  border-color: lime;
+  -webkit-box-shadow: 0px 0px 30px -15px lime;
+  -moz-box-shadow: 0px 0px 30px -15px lime;
+  box-shadow: 0px 0px 30px -15px lime;
+}
+
+body .wrapper .main .form-block-input input.not-valid {
+  border-color: red;
+  -webkit-box-shadow: 0px 0px 30px -15px rgba(255, 0, 0, 0.5);
+  -moz-box-shadow: 0px 0px 30px -15px rgba(255, 0, 0, 0.5);
+  box-shadow: 0px 0px 30px -15px rgba(255, 0, 0, 0.5);
 }
 
 body .wrapper .main .form-block-checkbox {

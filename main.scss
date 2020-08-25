@@ -18,21 +18,6 @@ body {
         width: 1920px;
         top: 0;
         left: calc((1920px - 100%) / -2);
-
-        @media (max-width: 1280px) {
-          right: -330px;
-          left: unset;
-        }
-
-        @media (max-width: 1050px) {
-          right: -470px;
-          left: unset;
-        }
-
-        @media (max-width: 640px) {
-          right: -600px;
-          left: unset;
-        }
       }
 
       &-top {
@@ -40,20 +25,6 @@ body {
         justify-content: space-between;
         align-items: flex-start;
         padding: 30px 70px 0 70px;
-
-        @media (max-width: 1350px) {
-          padding-left: calc(70px - (1350px - 100%) / 2);
-          padding-right: calc(70px - (1350px - 100%) / 2);
-        }
-
-        @media (max-width: 1250px) {
-          padding-left: 15px;
-          padding-right: 15px;
-        }
-
-        @media (max-width: 540px) {
-          display: block;
-        }
 
         &-logo {
           width: 270px;
@@ -75,11 +46,6 @@ body {
             font-size: 13px;
             line-height: 30px;
           }
-
-          @media (max-width: 540px) {
-            margin-top: 30px;
-            text-align: unset;
-          }
         }
       }
 
@@ -88,31 +54,12 @@ body {
         margin: 0 auto;
         padding: 0 15px 100px 15px;
 
-        @media (max-width: 760px) {
-          padding-bottom: 50px;
-        }
-
         .header-title {
           margin-top: 139px;
           max-width: 533px;
           font-size: 56px;
           line-height: 64px;
           font-weight: bold;
-
-          @media (max-width: 900px) {
-            max-width: 500px;
-            margin-top: 80px;
-          }
-
-          @media (max-width: 760px) {
-            max-width: 300px;
-            margin-top: 80px;
-          }
-
-          @media (max-width: 540px) {
-            max-width: 300px;
-            margin-top: 50px;
-          }
 
           &-part1,
           &-part2 {
@@ -132,14 +79,6 @@ body {
           border-radius: 6px;
           transition: $duration;
           padding: 0 15px;
-
-          @media (max-width: 900px) {
-            margin-top: 100px;
-          }
-
-          @media (max-width: 540px) {
-            margin-top: 50px;
-          }
 
           &:hover {
             background-color: red;
@@ -636,6 +575,21 @@ body {
               text-align: center;
               font-size: 26px;
               color: #333333;
+              transition: $duration;
+
+              &.valid {
+                border-color: lime;
+                -webkit-box-shadow: 0px 0px 30px -15px rgba(0, 255, 0, 1);
+                -moz-box-shadow: 0px 0px 30px -15px rgba(0, 255, 0, 1);
+                box-shadow: 0px 0px 30px -15px rgba(0, 255, 0, 1);
+              }
+
+              &.not-valid {
+                border-color: red;
+                -webkit-box-shadow: 0px 0px 30px -15px rgba(255, 0, 0, 0.5);
+                -moz-box-shadow: 0px 0px 30px -15px rgba(255, 0, 0, 0.5);
+                box-shadow: 0px 0px 30px -15px rgba(255, 0, 0, 0.5);
+              }
             }
           }
 

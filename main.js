@@ -5,7 +5,7 @@ window.onload = function () {
 
   tabs(".tabs-panel-item", ".tabs-content");
 
-  form(".form-block-input input");
+  form(".form-block-input input", ".form-block-submit");
 };
 
 function sticker(stickerSelector, startSelector, endSelector) {
@@ -57,9 +57,50 @@ function tabs(tabsSelector, contentSelector) {
   });
 }
 
-function form(inputSelector) {
+function form(inputSelector, submitSelector) {
   const
-    input = $(inputSelector);
+    input = $(inputSelector),
+    submit = $(submitSelector);
 
-  input.inputmask({"mask": "+7 (999) 999-9999"});
+  input.inputmask({ "mask": "+7 (999) 999-9999" });
+
+  submit.click(function (e) {
+    if (!validate(input)) {
+      input.removeClass("valid");
+      input.addClass("not-valid");
+      e.preventDefault();
+      input.get(0).focus();
+    }
+  });
+
+  input.focusout(function () {
+    input.removeClass("valid");
+    input.removeClass("not-valid");
+  });
+
+  input.focusin(function () {
+    if (validate(input)) {
+      input.addClass("valid");
+      input.removeClass("not-valid");
+    } else {
+      input.removeClass("valid");
+      input.addClass("not-valid");
+    }
+  });
+
+  input.get(0).oninput = function () {
+    if (validate(input)) {
+      input.addClass("valid");
+      input.removeClass("not-valid");
+    } else {
+      input.removeClass("valid");
+      input.addClass("not-valid");
+    }
+  };
+}
+
+function validate(input) {
+  const
+    value = input.val();
+  return value && value.indexOf("_") === -1;
 }
