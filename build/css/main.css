@@ -239,6 +239,10 @@ body .wrapper .main .cards .sticker {
   transition-duration: 0.25s;
 }
 
+body .wrapper .main .cards .sticker.fixed {
+  position: fixed;
+}
+
 body .wrapper .main .cards .sticker.non-active {
   opacity: 0;
   pointer-events: none;
@@ -654,6 +658,7 @@ body .wrapper .main .form-block-checkbox {
   display: block;
   padding-left: 40px;
   margin-bottom: 30px;
+  cursor: pointer;
 }
 
 body .wrapper .main .form-block-checkbox input {
@@ -677,6 +682,11 @@ body .wrapper .main .form-block-checkbox .link {
   font-weight: bold;
   display: inline;
   color: #333333;
+  transition: 0.25s;
+}
+
+body .wrapper .main .form-block-checkbox .link:hover {
+  color: #FE5000;
 }
 
 body .wrapper .main .form-block-checkbox .mark {

@@ -18,25 +18,20 @@ function sticker(stickerSelector, startSelector, endSelector) {
         endY = end.offset().top - pos * 2 - height,
         scrollY = $(window).scrollTop();
 
-    if (scrollY > startY && scrollY < endY) {
-      sticker.offset({
-        top: scrollY + pos
-      });
-      sticker.removeClass("non-active");
-      stickyNow = true;
-    } else if (stickyNow) {
+    if (stickyNow) {
       if (scrollY <= startY) {
-        sticker.offset({
-          top: startY + pos
-        });
-      } else {
-        sticker.offset({
-          top: endY + pos
-        });
+        sticker.removeClass("fixed");
+        stickyNow = false;
+      } else if (scrollY >= endY) {
         sticker.addClass("non-active");
+        stickyNow = false;
       }
-
-      stickyNow = false;
+    } else {
+      if (scrollY > startY && scrollY < endY) {
+        sticker.removeClass("non-active");
+        sticker.addClass("fixed");
+        stickyNow = true;
+      }
     }
   });
 }
