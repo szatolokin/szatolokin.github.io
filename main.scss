@@ -149,8 +149,14 @@ body {
           background-color: white;
           box-shadow: 0px 3px 30px rgba(135, 151, 155, 0.25);
           border-radius: 6px;
-          transition: $duration;
+          transition-property: box-shadow, opacity;
+          transition-duration: $duration;
 
+          &.non-active {
+            opacity: 0;
+            pointer-events: none;
+          }
+          
           &:hover {
             box-shadow: 0px 3px 30px rgba(45, 255, 45, 0.452);
 
