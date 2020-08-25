@@ -154,6 +154,69 @@ block body
                   a(href="#") Открыть счет
       .tabs
         .inner
+          .tabs-panel
+            .tabs-panel-item(data-index="1").active Бизнес-карта
+            .tabs-panel-item(data-index="2") Интернет и Мобильный Банк
+            .tabs-panel-item(data-index="3") Эквайринг
+            .tabs-panel-item(data-index="4") Онлайн касса
+            .tabs-panel-item(data-index="5") Полезные сервисы
+          .tabs-content
+            .swiper-wrapper
+              .swiper-slide
+                .slide(data-tab="business-card")
+                  .image
+                    img(src="img/cards.png", alt="")
+                  .content
+                    h3.content-title #{"Карта для бизнеса —\nраспоряжайтесь деньгами компании 24/7"}
+                    .content-text
+                      .content-text-item Круглосуточный доступ к деньгам на счете
+                      .content-text-item Платите без комиссии
+                      .content-text-item Снимайте наличные
+                      .content-text-item Пользуйтесь специальными предложениями
+              .swiper-slide
+                .slide(data-tab="business-card")
+                  .image
+                    img(src="img/cards.png", alt="")
+                  .content
+                    h3.content-title #{"Карта для бизнеса —\nраспоряжайтесь деньгами компании 24/7"}
+                    .content-text
+                      .content-text-item Круглосуточный доступ к деньгам на счете
+                      .content-text-item Платите без комиссии
+                      .content-text-item Снимайте наличные
+                      .content-text-item Пользуйтесь специальными предложениями
+              .swiper-slide
+                .slide(data-tab="business-card")
+                  .image
+                    img(src="img/cards.png", alt="")
+                  .content
+                    h3.content-title #{"Карта для бизнеса —\nраспоряжайтесь деньгами компании 24/7"}
+                    .content-text
+                      .content-text-item Круглосуточный доступ к деньгам на счете
+                      .content-text-item Платите без комиссии
+                      .content-text-item Снимайте наличные
+                      .content-text-item Пользуйтесь специальными предложениями
+              .swiper-slide
+                .slide(data-tab="business-card")
+                  .image
+                    img(src="img/cards.png", alt="")
+                  .content
+                    h3.content-title #{"Карта для бизнеса —\nраспоряжайтесь деньгами компании 24/7"}
+                    .content-text
+                      .content-text-item Круглосуточный доступ к деньгам на счете
+                      .content-text-item Платите без комиссии
+                      .content-text-item Снимайте наличные
+                      .content-text-item Пользуйтесь специальными предложениями
+              .swiper-slide
+                .slide(data-tab="business-card")
+                  .image
+                    img(src="img/cards.png", alt="")
+                  .content
+                    h3.content-title #{"Карта для бизнеса —\nраспоряжайтесь деньгами компании 24/7"}
+                    .content-text
+                      .content-text-item Круглосуточный доступ к деньгам на счете
+                      .content-text-item Платите без комиссии
+                      .content-text-item Снимайте наличные
+                      .content-text-item Пользуйтесь специальными предложениями
       .info-bottom
         .inner
           .info-bottom-title Три простых шага
@@ -171,6 +234,21 @@ block body
                 img(src="img/main-23.svg", alt="")
               .info-bottom-items-item-text #{"Подпишите\nдокументы"}
       .form
+        h2.form-title Оставить заявку
+        .form-block
+          form(action="#")
+            label.form-block-input
+              p Номер мобильного телефона
+              input(type="text", name="phone-number")
+            label.form-block-checkbox
+              input(type="checkbox", name="agreement")
+              span.text Я согласен с 
+              a(href="#").text.link условиями передачи информации
+              span.text , и подтверждаю согласие с 
+              a(href="#").text.link условиями резервирования счета
+              span.mark
+            p.form-block-notice После нажатия на кнопку "Подтвердить" на Ваш телефон будет направлен 4-значный код. Вводя код из SMS, я соглашаюсь с условиями пользовательского соглашения и согласен(на) на обработку моих персональных данных.
+            button(type="submit").form-block-submit подтвердить
 
     footer.footer
       .inner

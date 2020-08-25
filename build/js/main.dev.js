@@ -2,6 +2,7 @@
 
 window.onload = function () {
   sticker(".sticker", ".cards", ".tabs");
+  tabs(".tabs-panel-item", ".tabs-content");
 };
 
 function sticker(stickerSelector, startSelector, endSelector) {
@@ -35,6 +36,19 @@ function sticker(stickerSelector, startSelector, endSelector) {
       }
 
       stickyNow = false;
+    }
+  });
+}
+
+function tabs(tabsSelector, contentSelector) {
+  var slider = new Swiper(contentSelector, {
+    allowTouchMove: false
+  });
+  $(tabsSelector).click(function () {
+    if (!$(this).hasClass("active")) {
+      $(tabsSelector + ".active").removeClass("active");
+      $(this).addClass("active");
+      slider.slideTo($(this).data().index - 1);
     }
   });
 }

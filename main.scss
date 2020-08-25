@@ -292,7 +292,7 @@ body {
               &-btn {
                 width: 183px;
                 height: 45px;
-                margin: 0  auto;
+                margin: 0 auto;
                 border-radius: 6px;
                 background-color: $red;
                 transition: $duration;
@@ -368,9 +368,86 @@ body {
         .inner {
           min-height: 485px;
           max-width: 1250px;
-          padding: 0 15px;
+          padding: 60px 15px 0 15px;
           margin: 0 auto;
-          border: 1px solid black;
+
+          .tabs-panel {
+            display: flex;
+            align-items: flex-end;
+            overflow-x: auto;
+
+            &-item {
+              cursor: pointer;
+              flex-shrink: 0;
+              white-space: nowrap;
+              display: inline-block;
+              padding-bottom: 12px;
+              font-weight: bold;
+              font-size: 20px;
+              line-height: 29px;
+              color: #C8C8C8;
+              border-bottom: 4px solid transparent;
+
+              &:not(:last-of-type) {
+                margin-right: 40px;
+              }
+
+              &.active {
+                color: #449099;
+                border-color: #449099;
+              }
+            }
+          }
+
+          .tabs-content {
+            overflow: hidden;
+
+            [data-tab="business-card"] {
+              padding: 47px 50px 104px 50px;
+              position: relative;
+              overflow: hidden;
+
+              .image {
+                width: 560px;
+                position: absolute;
+                z-index: -1;
+                top: 20px;
+                left: 540px;
+              }
+
+              .content-title {
+                white-space: pre-line;
+                font-weight: bold;
+                font-size: 22px;
+                line-height: 28px;
+                color: #333333;
+                margin-bottom: 20px;
+              }
+
+              .content-text-item {
+                padding-left: 18px;
+                position: relative;
+                font-size: 18px;
+                line-height: 27px;
+
+                &::before {
+                  content: "";
+                  display: block;
+                  background-color: $black;
+                  width: 6px;
+                  height: 6px;
+                  border-radius: 3px;
+                  position: absolute;
+                  left: 0;
+                  top: 10.5px;
+                }
+
+                &:not(:last-of-type) {
+                  margin-bottom: 15px;
+                }
+              }
+            }
+          }
         }
       }
 
@@ -458,9 +535,117 @@ body {
       .form {
         min-height: 645px;
         max-width: 1250px;
-        padding: 0 15px;
+        padding: 97px 15px 100px 15px;
         margin: 0 auto;
-        border: 1px solid black;
+
+        &-title {
+          font-size: 36px;
+          line-height: 53px;
+          color: #333333;
+          text-align: center;
+          margin-bottom: 40px;
+        }
+
+        &-block {
+          max-width: 510px;
+          margin: 0 auto;
+
+          &-input {
+            display: block;
+            margin-bottom: 30px;
+
+            p {
+              font-size: 18px;
+              line-height: 27px;
+              color: #666666;
+              margin-bottom: 11px;
+            }
+
+            input {
+              display: block;
+              width: 100%;
+              height: 50px;
+              background: #FFFFFF;
+              border: 1px solid #C3C3C3;
+              border-radius: 6px;
+              text-align: center;
+              font-size: 26px;
+              color: #333333;
+            }
+          }
+
+          &-checkbox {
+            position: relative;
+            display: block;
+            padding-left: 40px;
+            margin-bottom: 30px;
+
+            input {
+              position: absolute;
+              visibility: hidden;
+              pointer-events: none;
+
+              &:checked~.mark {
+                border-color: $red;
+                background-color: $red;
+              }
+            }
+
+            .text {
+              font-size: 15px;
+              line-height: 22px;
+              color: #666666;
+            }
+
+            .link {
+              font-weight: bold;
+              display: inline;
+              color: #333333;
+            }
+
+            .mark {
+              cursor: pointer;
+              display: block;
+              width: 25px;
+              height: 25px;
+              position: absolute;
+              left: 0;
+              top: 1px;
+              background: #FFFFFF;
+              border: 1px solid #C3C3C3;
+              border-radius: 6px;
+              transition: $duration;
+            }
+          }
+
+          &-notice {
+            margin-bottom: 40px;
+            color: #666666;
+            font-size: 14px;
+            line-height: 21px;
+          }
+
+          &-submit {
+            font-weight: bold;
+            font-size: 15px;
+            line-height: 22px;
+            text-transform: uppercase;
+            display: block;
+            width: 100%;
+            height: 60px;
+            background: #FFFFFF;
+            border: 1px solid $red;
+            border-radius: 6px;
+            color: $red;
+            transition: $duration;
+
+            &:hover {
+              background-color: $red;
+              color: white;
+              cursor: pointer;
+            }
+          }
+        }
       }
     }
 
