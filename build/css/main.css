@@ -92,6 +92,10 @@ body .wrapper .header-inner-button {
   border-radius: 6px;
   transition: 0.25s;
   padding: 0 15px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none !important;
   user-select: none;
 }
 
@@ -428,6 +432,10 @@ body .wrapper .main .cards-inner-content .card-content-column-inner-item-text .h
   font-size: 12px;
   line-height: 20px;
   text-align: center;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none !important;
   user-select: none;
 }
 
@@ -439,6 +447,10 @@ body .wrapper .main .cards-inner-content .card-button {
   border-radius: 6px;
   background-color: #FE5000;
   transition: 0.25s;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none !important;
   user-select: none;
 }
 
@@ -509,6 +521,10 @@ body .wrapper .main .cards-sticker {
   border-radius: 6px;
   transition-property: box-shadow, opacity;
   transition-duration: 0.25s;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none !important;
   user-select: none;
 }
 
@@ -599,6 +615,10 @@ body .wrapper .main .tabs-inner-panel {
 
 body .wrapper .main .tabs-inner-panel-item {
   cursor: pointer;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none !important;
   user-select: none;
   flex-shrink: 0;
   padding-bottom: 12px;
@@ -942,6 +962,10 @@ body .wrapper .main .form-block-submit {
   border-radius: 6px;
   color: #FE5000;
   transition: 0.25s;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none !important;
   user-select: none;
 }
 
