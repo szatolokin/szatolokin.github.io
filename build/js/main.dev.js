@@ -4,6 +4,7 @@ window.onload = function () {
   sticker(".cards-sticker", ".cards-inner-content", ".tabs", 35);
   tabs(".tabs-inner-panel-item", ".tabs-inner-content");
   form(".form-block-input input", ".form-block-submit");
+  tooltips([".help"]);
 };
 
 function sticker(stickerSelector, startSelector, endSelector, offset) {
@@ -87,9 +88,17 @@ function form(inputSelector, submitSelector) {
       input.addClass("not-valid");
     }
   };
+
+  function validate(input) {
+    var value = input.val();
+    return value && value.indexOf("_") === -1;
+  }
 }
 
-function validate(input) {
-  var value = input.val();
-  return value && value.indexOf("_") === -1;
+function tooltips(tooltips) {
+  for (var i = 0; i < tooltips.length; i++) {
+    $(tooltips[i]).tooltipster({
+      theme: ""
+    });
+  }
 }
