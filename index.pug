@@ -58,33 +58,33 @@ block body
               .cards-inner-content-top-left.card
                 .card-image
                   img(src="img/mask-left-top.svg", alt="")
-                
+
                 .card-title
                   span Сочный
                   span #{"\n"}
                   span 0 ₽/мес
-                
+
                 .card-line
-                
+
                 .card-content
                   .card-content-column
                     .card-content-column-item
                       .card-content-column-item-title 3 платежа
                       .card-content-column-item-text контрагентам в другой банк
-                    
+
                     .card-content-column-item
                       .card-content-column-item-title Бизнес-карта
                       .card-content-column-item-text +обслуживание первый год
-                  
+
                   .card-content-column
                     .card-content-column-item
                       .card-content-column-item-title до 200 тыс ₽/мес
                       .card-content-column-item-text переводы ФЛ внутри банка
                         span(title="Подсказка").help ?
-                
+
                 .card-button
                   a(href="#") открыть счет
-              
+
               .cards-inner-content-top-right.card
                 .card-image
                   img(src="img/mask-right-top.svg", alt="")
@@ -101,98 +101,98 @@ block body
                     .card-content-column-item
                       .card-content-column-item-title 5 платежей
                       .card-content-column-item-text контрагентам в другой банк
-                    
+
                     .card-content-column-item
                       .card-content-column-item-title до 200 тыс ₽/мес
                       .card-content-column-item-text переводы в пользу ФЛ
                         span(title="Подсказка").help ?
-                  
+
                   .card-content-column
                     .card-content-column-item
                       .card-content-column-item-title до 50 тыс ₽/мес
                       .card-content-column-item-text прием наличных
-                    
+
                     .card-content-column-item
                       .card-content-column-item-title Бизнес-карта
                       .card-content-column-item-text +обслуживание первый год
-                
+
                 .card-button
                   a(href="#") открыть счет  
-            
+
             .cards-inner-content-bottom
               .cards-inner-content-top-left.card
                 .card-image
                   img(src="img/mask-left-bottom.svg", alt="")
-                
+
                 .card-title
                   span Бодрящий
                   span #{"\n"}
                   span 1 200 ₽/мес
-                
+
                 .card-line
-                
+
                 .card-content
                   .card-content-column
                     .card-content-column-item
                       .card-content-column-item-title 15 платежей
                       .card-content-column-item-text контрагентам в другой банк
-                    
+
                     .card-content-column-item
                       .card-content-column-item-title до 300 тыс ₽/мес
                       .card-content-column-item-text переводы в пользу ФЛ
                         span(title="Подсказка").help ?
-                    
+
                     .card-content-column-item
                       .card-content-column-item-title СМС-инфо по счету
                       .card-content-column-item-text бесплатно
-                  
+
                   .card-content-column
                     .card-content-column-item
                       .card-content-column-item-title до 100 тыс ₽/мес
                       .card-content-column-item-text прием наличных
-                    
+
                     .card-content-column-item
                       .card-content-column-item-title Бизнес-карта
                       .card-content-column-item-text +обслуживание первый год
-                
+
                 .card-button
                   a(href="#") Открыть счет
-              
+
               .cards-inner-content-top-right.card
                 .card-image
                   img(src="img/mask-right-bottom.svg", alt="")
-                
+
                 .card-title
                   span Полезный
                   span #{"\n"}
                   span 2 500 ₽/мес
-                
+
                 .card-line
-                
+
                 .card-content
                   .card-content-column
                     .card-content-column-item
                       .card-content-column-item-title 50 платежей
                       .card-content-column-item-text контрагентам в другой банк
-                    
+
                     .card-content-column-item
                       .card-content-column-item-title до 300 тыс ₽/мес
                       .card-content-column-item-text переводы в пользу ФЛ
                         span(title="Подсказка").help ?
-                    
+
                     .card-content-column-item
                       .card-content-column-item-title СМС-инфо по счету
                       .card-content-column-item-text бесплатно
-                  
+
                   .card-content-column
                     .card-content-column-item
                       .card-content-column-item-title без ограничений
                       .card-content-column-item-text прием наличных
-                    
+
                     .card-content-column-item
                       .card-content-column-item-title Бизнес-карта
                       .card-content-column-item-text +обслуживание первый год
-                
+
                 .card-button
                   a(href="#") Открыть счет
 
@@ -202,86 +202,124 @@ block body
             img(src="img/sticker.svg", alt="")
 
       .tabs
-        .inner
-          .tabs-panel
-            .tabs-panel-item(data-index="1").active Бизнес-карта
-            .tabs-panel-item(data-index="2") Интернет и Мобильный Банк
-            .tabs-panel-item(data-index="3") Эквайринг
-            .tabs-panel-item(data-index="4") Онлайн касса
-            .tabs-panel-item(data-index="5") Полезные сервисы
-          .tabs-content
+
+        .tabs-inner
+
+          .tabs-inner-panel
+            .tabs-inner-panel-item(data-index="1").active Бизнес-карта
+
+            .tabs-inner-panel-item(data-index="2") Интернет и Мобильный Банк
+
+            .tabs-inner-panel-item(data-index="3") Эквайринг
+
+            .tabs-inner-panel-item(data-index="4") Онлайн касса
+
+            .tabs-inner-panel-item(data-index="5") Полезные сервисы
+
+          .tabs-inner-content
             .swiper-wrapper
               .swiper-slide
                 .slide(data-tab="business-card")
                   .image
                     img(src="img/cards.png", alt="")
+
                   .content
                     h3.content-title #{"Карта для бизнеса —\nраспоряжайтесь деньгами компании 24/7"}
+
                     .content-text
                       .content-text-item Круглосуточный доступ к деньгам на счете
                       .content-text-item Платите без комиссии
                       .content-text-item Снимайте наличные
                       .content-text-item Пользуйтесь специальными предложениями
+
               .swiper-slide
                 .slide(data-tab="business-card")
                   .image
                     img(src="img/cards.png", alt="")
+
                   .content
                     h3.content-title #{"Карта для бизнеса —\nраспоряжайтесь деньгами компании 24/7"}
+
                     .content-text
                       .content-text-item Круглосуточный доступ к деньгам на счете
                       .content-text-item Платите без комиссии
                       .content-text-item Снимайте наличные
                       .content-text-item Пользуйтесь специальными предложениями
+                      .content-text-item Платите без комиссии
+
               .swiper-slide
                 .slide(data-tab="business-card")
                   .image
                     img(src="img/cards.png", alt="")
+
                   .content
                     h3.content-title #{"Карта для бизнеса —\nраспоряжайтесь деньгами компании 24/7"}
+
                     .content-text
                       .content-text-item Круглосуточный доступ к деньгам на счете
                       .content-text-item Платите без комиссии
                       .content-text-item Снимайте наличные
                       .content-text-item Пользуйтесь специальными предложениями
+                      .content-text-item Круглосуточный доступ к деньгам на счете
+                      .content-text-item Платите без комиссии
+                      .content-text-item Снимайте наличные
+
               .swiper-slide
                 .slide(data-tab="business-card")
                   .image
                     img(src="img/cards.png", alt="")
+
                   .content
                     h3.content-title #{"Карта для бизнеса —\nраспоряжайтесь деньгами компании 24/7"}
+
                     .content-text
                       .content-text-item Круглосуточный доступ к деньгам на счете
                       .content-text-item Платите без комиссии
                       .content-text-item Снимайте наличные
                       .content-text-item Пользуйтесь специальными предложениями
+                      .content-text-item Круглосуточный доступ к деньгам на счете
+                      .content-text-item Платите без комиссии
+
               .swiper-slide
                 .slide(data-tab="business-card")
                   .image
                     img(src="img/cards.png", alt="")
+
                   .content
                     h3.content-title #{"Карта для бизнеса —\nраспоряжайтесь деньгами компании 24/7"}
+
                     .content-text
                       .content-text-item Круглосуточный доступ к деньгам на счете
                       .content-text-item Платите без комиссии
                       .content-text-item Снимайте наличные
                       .content-text-item Пользуйтесь специальными предложениями
-      .info-bottom
-        .inner
-          .info-bottom-title Три простых шага
-          .info-bottom-items
-            .info-bottom-items-item
-              .info-bottom-items-item-image
+                      .content-text-item Круглосуточный доступ к деньгам на счете
+                      .content-text-item Платите без комиссии
+                      .content-text-item Снимайте наличные
+                      .content-text-item Пользуйтесь специальными предложениями
+
+      .info2
+
+        .info2-inner
+          
+          .info2-inner-title Три простых шага
+          
+          .info2-inner-items
+            .info2-inner-items-item
+              .info2-inner-items-item-image
                 img(src="img/main-21.svg", alt="")
-              .info-bottom-items-item-text #{"Оставьте заявку\тна сайте"}
-            .info-bottom-items-item
-              .info-bottom-items-item-image
+              .info2-inner-items-item-text #{"Оставьте заявку\тна сайте"}
+            
+            .info2-inner-items-item
+              .info2-inner-items-item-image
                 img(src="img/main-22.svg", alt="")
-              .info-bottom-items-item-text #{"Получите номер счёта\nи реквизиты"}
-            .info-bottom-items-item
-              .info-bottom-items-item-image
+              .info2-inner-items-item-text #{"Получите номер счёта\nи реквизиты"}
+            
+            .info2-inner-items-item
+              .info2-inner-items-item-image
                 img(src="img/main-23.svg", alt="")
-              .info-bottom-items-item-text #{"Подпишите\nдокументы"}
+              .info2-inner-items-item-text #{"Подпишите\nдокументы"}
+
       .form
         h2.form-title Оставить заявку
         .form-block

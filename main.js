@@ -1,9 +1,7 @@
-"use strict";
-
 window.onload = function () {
-  sticker(".sticker", ".cards", ".tabs");
+  // sticker(".sticker", ".cards", ".tabs");
 
-  tabs(".tabs-panel-item", ".tabs-content");
+  tabs(".tabs-inner-panel-item", ".tabs-inner-content");
 
   form(".form-block-input input", ".form-block-submit");
 };
@@ -45,7 +43,7 @@ function sticker(stickerSelector, startSelector, endSelector) {
 
 function tabs(tabsSelector, contentSelector) {
   const
-    slider = new Swiper(contentSelector, { allowTouchMove: false });
+    slider = new Swiper(contentSelector, { allowTouchMove: false, autoHeight: true, updateOnWindowResize: true });
 
   $(tabsSelector).click(function () {
     if (!$(this).hasClass("active")) {
