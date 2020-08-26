@@ -6,6 +6,8 @@ window.onload = function () {
   form(".form-block-input input", ".form-block-submit");
 
   tooltips([".help"]);
+
+  $(document.body).css("background-color", "black");
 };
 
 function sticker(stickerSelector, startSelector, endSelector, offset) {

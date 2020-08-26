@@ -420,6 +420,7 @@ body .wrapper .main .cards-inner-content .card-content-column-inner-item-text {
 
 body .wrapper .main .cards-inner-content .card-content-column-inner-item-text .help {
   position: absolute;
+  cursor: default;
   top: -1px;
   right: -27px;
   display: block;
