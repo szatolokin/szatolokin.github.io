@@ -736,12 +736,13 @@ body .wrapper .main .info2-inner-title {
 
 body .wrapper .main .info2-inner-items {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: flex-start;
+  padding: 0 132.5px;
 }
 
 body .wrapper .main .info2-inner-items-item {
-  flex-basis: 205px;
+  flex-basis: 235px;
   padding: 0 15px;
 }
 
