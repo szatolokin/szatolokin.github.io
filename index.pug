@@ -1,25 +1,26 @@
 extends mixin/pug/layout
 
 block body
+
   .wrapper
+
     header.header
+
       .header-background
         img(src="img/header-background.jpg", alt="")
+
+      .header-inner
+        h1.header-inner-title !{"Счет для бизнеса <span class='red'>бесплатно</span> и навсегда"}
+        .header-inner-button
+          a(href="#") открыть счет
+
       .header-top
         .header-top-logo
           a(href="#")
             img(src="img/logo.svg", alt="")
         .header-top-contact
           .header-top-contact-number 8 (800) 775-88-88
-          .header-top-contact-text Бесплатный звонок по России
-      .inner
-        h1.header-title
-          .header-title-part1 Счет для бизнеса
-          .header-title-part2
-            span.red бесплатно 
-            span и навсегда
-        .header-btn
-          a(href="#") ОТКРЫТЬ СЧЕТ
+          .header-top-contact-caption Бесплатный звонок по России
 
     main.main
       .info-top

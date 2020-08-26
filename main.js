@@ -52,7 +52,7 @@ function tabs(tabsSelector, contentSelector) {
       $(tabsSelector + ".active").removeClass("active");
       $(this).addClass("active");
 
-      slider.slideTo($(this).data().index - 1);
+      slider.slideTo($(this).data().index - 1, 400);
     }
   });
 }
