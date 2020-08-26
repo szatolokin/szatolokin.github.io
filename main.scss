@@ -182,41 +182,64 @@ body {
     }
 
     .main {
-      .info-top {
-        min-height: 288px;
-        width: 100%;
-        max-width: 1250px;
-        padding: 60px 15px;
-        margin: 0 auto;
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        flex-wrap: wrap;
+      .info1 {
+        position: relative;
 
-        &-item {
-          flex-basis: 240px;
-          flex-grow: 1;
+        &-inner {
+          min-height: 288px;
+          max-width: 1250px;
+          padding: 60px 15px;
+          margin: 0 auto;
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-start;
 
-          &-image {
-            width: 100px;
-            margin: 0 auto;
+          &-item {
+            width: 240px;
+
+            &-image {
+              width: 100px;
+              margin: 0 auto;
+            }
+
+            &-text {
+              font-size: 20px;
+              line-height: 24px;
+              text-align: center;
+              margin-top: 20px;
+              white-space: pre-line;
+            }
           }
 
-          &-text {
-            font-size: 20px;
-            line-height: 24px;
-            text-align: center;
-            margin-top: 20px;
-            white-space: pre-line;
+          @include max-width(1130px) {
+            display: block;
+  
+            &-item {
+              display: inline-block;
+              width: 49.5%;
+              vertical-align: top;
+              padding: 0 30px;
+              
+              &:first-of-type,
+              &:nth-of-type(2) {
+                margin-bottom: 50px;
+              }
+
+              &-text {
+                white-space: unset;
+              }
+            }
           }
 
-          @media (max-width: 1010px) {
-            margin-bottom: 30px;
+          @include max-width(550px) {
+            &-item {
+              width: 100%;
+              
+              &:not(:last-of-type) {
+                margin-bottom: 50px;
+              }
+            }
           }
-        }
-
-        @media (max-width: 1010px) {
-          padding-bottom: 30px;
         }
       }
 
@@ -249,6 +272,7 @@ body {
           }
 
           &-content {
+
             &-top,
             &-bottom {
               display: flex;
@@ -406,8 +430,9 @@ body {
             &-title {
               text-align: center;
             }
-            
+
             &-content {
+
               &-top,
               &-bottom {
                 display: block;
