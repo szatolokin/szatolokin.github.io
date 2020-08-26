@@ -1,22 +1,20 @@
 "use strict";
 
 window.onload = function () {
-  sticker(".cards-sticker", ".cards", ".tabs");
+  sticker(".cards-sticker", ".cards-inner-content", ".tabs", 35);
   tabs(".tabs-inner-panel-item", ".tabs-inner-content");
   form(".form-block-input input", ".form-block-submit");
 };
 
-function sticker(stickerSelector, startSelector, endSelector) {
+function sticker(stickerSelector, startSelector, endSelector, offset) {
   var sticker = $(stickerSelector),
-      pos = sticker.position().top,
       height = sticker.height(),
       start = $(startSelector),
       end = $(endSelector);
   var stickyNow = false;
   $(window).scroll(function () {
-    var startY = start.offset().top,
-        //endY = end.offset().top - (pos * 2) - height,
-    endY = end.offset().top - 140 - height,
+    var startY = start.offset().top - (height / 2 + 5.5) - offset,
+        endY = end.offset().top - offset * 2 - height,
         scrollY = $(window).scrollTop();
 
     if (stickyNow) {
