@@ -1,5 +1,5 @@
 window.onload = function () {
-  // sticker(".sticker", ".cards", ".tabs");
+  sticker(".cards-sticker", ".cards", ".tabs");
 
   tabs(".tabs-inner-panel-item", ".tabs-inner-content");
 
@@ -20,7 +20,8 @@ function sticker(stickerSelector, startSelector, endSelector) {
   $(window).scroll(function () {
     const
       startY = start.offset().top,
-      endY = end.offset().top - (pos * 2) - height,
+      //endY = end.offset().top - (pos * 2) - height,
+      endY = end.offset().top - 140 - height,
       scrollY = $(window).scrollTop();
 
     if (stickyNow) {

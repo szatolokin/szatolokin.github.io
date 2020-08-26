@@ -1,7 +1,7 @@
 "use strict";
 
 window.onload = function () {
-  // sticker(".sticker", ".cards", ".tabs");
+  sticker(".cards-sticker", ".cards", ".tabs");
   tabs(".tabs-inner-panel-item", ".tabs-inner-content");
   form(".form-block-input input", ".form-block-submit");
 };
@@ -15,7 +15,8 @@ function sticker(stickerSelector, startSelector, endSelector) {
   var stickyNow = false;
   $(window).scroll(function () {
     var startY = start.offset().top,
-        endY = end.offset().top - pos * 2 - height,
+        //endY = end.offset().top - (pos * 2) - height,
+    endY = end.offset().top - 140 - height,
         scrollY = $(window).scrollTop();
 
     if (stickyNow) {
