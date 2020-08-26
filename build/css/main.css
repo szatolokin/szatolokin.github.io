@@ -359,8 +359,12 @@ body .wrapper .main .cards-inner-content .card-title {
   text-align: center;
 }
 
+body .wrapper .main .cards-inner-content .card-title span {
+  display: inline-block;
+  margin: 0 10px;
+}
+
 body .wrapper .main .cards-inner-content .card-title span:last-of-type {
-  margin-left: 20px;
   color: #7F94A8;
   white-space: nowrap;
 }
