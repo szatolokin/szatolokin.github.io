@@ -358,42 +358,48 @@ body {
                 align-items: flex-start;
 
                 &-column {
+                  display: flex;
+                  flex-basis: 50%;
+
                   &:first-of-type {
-                    margin-right: 20%;
+                    margin-right: 86px;
+                    justify-content: flex-end;
                   }
 
-                  &-item {
-                    &:not(:last-of-type) {
-                      margin-bottom: 15px;
-                    }
-
-                    &-title {
-                      font-size: 18px;
-                      line-height: 22px;
-                      margin-bottom: 5px;
-                    }
-
-                    &-text {
-                      font-size: 14px;
-                      line-height: 18px;
-                      color: #999999;
-                      position: relative;
-
-                      .help {
-                        position: absolute;
-                        top: -1px;
-                        right: -27px;
-                        display: block;
-                        width: 20px;
-                        height: 20px;
-                        border-radius: 10px;
-                        border: 1px solid #E5E5E5;
-                        background-color: white;
-                        color: #838383;
-                        font-size: 12px;
-                        line-height: 20px;
-                        text-align: center;
-                        user-select: none;
+                  &-inner {
+                    &-item {
+                      &:not(:last-of-type) {
+                        margin-bottom: 15px;
+                      }
+  
+                      &-title {
+                        font-size: 18px;
+                        line-height: 22px;
+                        margin-bottom: 5px;
+                      }
+  
+                      &-text {
+                        font-size: 14px;
+                        line-height: 18px;
+                        color: #999999;
+                        position: relative;
+  
+                        .help {
+                          position: absolute;
+                          top: -1px;
+                          right: -27px;
+                          display: block;
+                          width: 20px;
+                          height: 20px;
+                          border-radius: 10px;
+                          border: 1px solid #E5E5E5;
+                          background-color: white;
+                          color: #838383;
+                          font-size: 12px;
+                          line-height: 20px;
+                          text-align: center;
+                          user-select: none;
+                        }
                       }
                     }
                   }
@@ -468,6 +474,16 @@ body {
 
                 &-content {
                   padding: 0 4.3%;
+
+                  &-column {
+                    &:first-of-type {
+                      margin-right: 20%;
+                    }
+
+                    .help {
+                      right: -24px;
+                    }
+                  }
                 }
 
                 &-button {

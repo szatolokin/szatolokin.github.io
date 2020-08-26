@@ -383,28 +383,34 @@ body .wrapper .main .cards-inner-content .card-content {
   align-items: flex-start;
 }
 
-body .wrapper .main .cards-inner-content .card-content-column:first-of-type {
-  margin-right: 20%;
+body .wrapper .main .cards-inner-content .card-content-column {
+  display: flex;
+  flex-basis: 50%;
 }
 
-body .wrapper .main .cards-inner-content .card-content-column-item:not(:last-of-type) {
+body .wrapper .main .cards-inner-content .card-content-column:first-of-type {
+  margin-right: 86px;
+  justify-content: flex-end;
+}
+
+body .wrapper .main .cards-inner-content .card-content-column-inner-item:not(:last-of-type) {
   margin-bottom: 15px;
 }
 
-body .wrapper .main .cards-inner-content .card-content-column-item-title {
+body .wrapper .main .cards-inner-content .card-content-column-inner-item-title {
   font-size: 18px;
   line-height: 22px;
   margin-bottom: 5px;
 }
 
-body .wrapper .main .cards-inner-content .card-content-column-item-text {
+body .wrapper .main .cards-inner-content .card-content-column-inner-item-text {
   font-size: 14px;
   line-height: 18px;
   color: #999999;
   position: relative;
 }
 
-body .wrapper .main .cards-inner-content .card-content-column-item-text .help {
+body .wrapper .main .cards-inner-content .card-content-column-inner-item-text .help {
   position: absolute;
   top: -1px;
   right: -27px;
@@ -476,6 +482,12 @@ body .wrapper .main .cards-inner-content .card-button:hover {
   }
   body .wrapper .main .cards-inner-content .card-content {
     padding: 0 4.3%;
+  }
+  body .wrapper .main .cards-inner-content .card-content-column:first-of-type {
+    margin-right: 20%;
+  }
+  body .wrapper .main .cards-inner-content .card-content-column .help {
+    right: -24px;
   }
   body .wrapper .main .cards-inner-content .card-button {
     width: 100%;
