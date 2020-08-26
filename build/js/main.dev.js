@@ -5,7 +5,6 @@ window.onload = function () {
   tabs(".tabs-inner-panel-item", ".tabs-inner-content");
   form(".form-block-input input", ".form-block-submit");
   tooltips([".help"]);
-  $(document.body).css("background-color", "black");
 };
 
 function sticker(stickerSelector, startSelector, endSelector, offset) {
