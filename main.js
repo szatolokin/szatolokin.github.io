@@ -44,7 +44,7 @@ function sticker(stickerSelector, startSelector, endSelector, offset) {
 
 function tabs(tabsSelector, contentSelector) {
   const
-    slider = new Swiper(contentSelector, { allowTouchMove: false, autoHeight: true, updateOnWindowResize: true });
+    slider = new Swiper(contentSelector, { simulateTouch: false, autoHeight: true });
 
   $(tabsSelector).click(function () {
     if (!$(this).hasClass("active")) {

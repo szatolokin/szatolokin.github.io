@@ -19,7 +19,7 @@ body {
         left: calc((1920px - 100%) / -2);
 
         @media (max-width: 1270px) {
-          left: unset;
+          left: auto;
           right: -325px;
         }
 
@@ -33,7 +33,7 @@ body {
 
         @media (max-width: 480px) {
           left: 0px;
-          right: unset;
+          right: auto;
         }
       }
 
@@ -174,7 +174,7 @@ body {
           display: block;
 
           &-contact {
-            text-align: unset;
+            text-align: left;
             margin-top: 40px;
           }
         }
@@ -226,7 +226,7 @@ body {
               }
 
               &-text {
-                white-space: unset;
+                white-space: normal;
               }
             }
           }
@@ -472,8 +472,8 @@ body {
           @include max-width(619px) {
             &-content {
               .card {
-                width: unset;
-                min-width: unset;
+                width: auto;
+                min-width: auto;
                 padding-left: 10%;
                 padding-right: 10%;
 
@@ -675,7 +675,7 @@ body {
 
               @include max-width(1000px) {
                 .image {
-                  left: unset;
+                  left: auto;
                   right: -130px;
                 }
               }
@@ -683,7 +683,7 @@ body {
               @include max-width(915px) {
                 .image {
                   left: 455px;
-                  right: unset;
+                  right: auto;
                 }
               }
 

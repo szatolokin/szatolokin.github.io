@@ -21,7 +21,7 @@ body .wrapper .header-background {
 
 @media (max-width: 1270px) {
   body .wrapper .header-background {
-    left: unset;
+    left: auto;
     right: -325px;
   }
 }
@@ -41,7 +41,7 @@ body .wrapper .header-background {
 @media (max-width: 480px) {
   body .wrapper .header-background {
     left: 0px;
-    right: unset;
+    right: auto;
   }
 }
 
@@ -211,7 +211,7 @@ body .wrapper .header-top-contact-caption {
     display: block;
   }
   body .wrapper .header-top-contact {
-    text-align: unset;
+    text-align: left;
     margin-top: 40px;
   }
 }
@@ -261,7 +261,7 @@ body .wrapper .main .info1-inner-item-text {
     margin-bottom: 50px;
   }
   body .wrapper .main .info1-inner-item-text {
-    white-space: unset;
+    white-space: normal;
   }
 }
 
@@ -492,8 +492,8 @@ body .wrapper .main .cards-inner-content .card-button:hover {
 
 @media (max-width: 619px) {
   body .wrapper .main .cards-inner-content .card {
-    width: unset;
-    min-width: unset;
+    width: auto;
+    min-width: auto;
     padding-left: 10%;
     padding-right: 10%;
   }
@@ -701,7 +701,7 @@ body .wrapper .main .tabs-inner-content [data-tab="business-card"] .content-text
 
 @media (max-width: 1000px) {
   body .wrapper .main .tabs-inner-content [data-tab="business-card"] .image {
-    left: unset;
+    left: auto;
     right: -130px;
   }
 }
@@ -709,7 +709,7 @@ body .wrapper .main .tabs-inner-content [data-tab="business-card"] .content-text
 @media (max-width: 915px) {
   body .wrapper .main .tabs-inner-content [data-tab="business-card"] .image {
     left: 455px;
-    right: unset;
+    right: auto;
   }
 }
 
