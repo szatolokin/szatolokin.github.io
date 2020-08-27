@@ -220,8 +220,7 @@ body {
               vertical-align: top;
               padding: 0 30px;
 
-              &:first-of-type,
-              &:nth-of-type(2) {
+              &:nth-of-type(-n + 2) {
                 margin-bottom: 50px;
               }
 
@@ -742,11 +741,10 @@ body {
               padding: 0 15px;
 
               &:nth-of-type(2) {
-
                 &::before,
                 &::after {
                   position: absolute;
-                  width: 8%;
+                  width: 100px;
                   height: 1px;
                   background-color: #999999;
                   opacity: 0.5;
@@ -756,11 +754,11 @@ body {
                 }
 
                 &::before {
-                  left: 30.4%;
+                  left: calc(395px - (1250px - 100%) / 2);
                 }
 
                 &::after {
-                  right: 30.4%;
+                  right: calc(395px - (1250px - 100%) / 2);
                 }
               }
 
@@ -784,6 +782,23 @@ body {
 
             @include max-width(985px) {
               padding: 0;
+
+              &-item {
+                &:nth-of-type(2) {
+                  &::before,
+                  &::after {
+                    width: 10.152%;
+                  }
+
+                  &::before {
+                    left: calc(262.5px - (985px - 100%) / 4.5);
+                  }
+  
+                  &::after {
+                    right: calc(262.5px - (985px - 100%) / 4.5);
+                  }
+                }
+              }
             }
 
             @include max-width(615px) {
