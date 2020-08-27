@@ -621,6 +621,7 @@ body .wrapper .main .tabs-inner-panel-item {
   -moz-user-select: none;
   -ms-user-select: none !important;
   user-select: none;
+  white-space: nowrap;
   flex-shrink: 0;
   padding-bottom: 12px;
   font-weight: bold;
@@ -767,7 +768,7 @@ body .wrapper .main .info2-inner-items-item {
   padding: 0 15px;
 }
 
-body .wrapper .main .info2-inner-items-item:nth-of-type(2) .info2-inner-items-item-text::before, body .wrapper .main .info2-inner-items-item:nth-of-type(2) .info2-inner-items-item-text::after {
+body .wrapper .main .info2-inner-items-item:nth-of-type(2)::before, body .wrapper .main .info2-inner-items-item:nth-of-type(2)::after {
   position: absolute;
   width: 8%;
   height: 1px;
@@ -778,11 +779,11 @@ body .wrapper .main .info2-inner-items-item:nth-of-type(2) .info2-inner-items-it
   top: 183px;
 }
 
-body .wrapper .main .info2-inner-items-item:nth-of-type(2) .info2-inner-items-item-text::before {
+body .wrapper .main .info2-inner-items-item:nth-of-type(2)::before {
   left: 30.4%;
 }
 
-body .wrapper .main .info2-inner-items-item:nth-of-type(2) .info2-inner-items-item-text::after {
+body .wrapper .main .info2-inner-items-item:nth-of-type(2)::after {
   right: 30.4%;
 }
 
@@ -799,17 +800,29 @@ body .wrapper .main .info2-inner-items-item-text {
   margin-top: 25px;
 }
 
+@media (max-width: 1250px) {
+  body .wrapper .main .info2-inner-items {
+    padding: 0 calc((100% - 955px) / 2);
+  }
+}
+
+@media (max-width: 985px) {
+  body .wrapper .main .info2-inner-items {
+    padding: 0;
+  }
+}
+
 @media (max-width: 615px) {
   body .wrapper .main .info2-inner-items {
     display: block;
   }
   body .wrapper .main .info2-inner-items-item {
-    padding: unset;
+    padding: 0;
   }
   body .wrapper .main .info2-inner-items-item:not(:last-of-type) {
     margin-bottom: 50px;
   }
-  body .wrapper .main .info2-inner-items-item:nth-of-type(2) .info2-inner-items-item-text::before, body .wrapper .main .info2-inner-items-item:nth-of-type(2) .info2-inner-items-item-text::after {
+  body .wrapper .main .info2-inner-items-item:nth-of-type(2)::before, body .wrapper .main .info2-inner-items-item:nth-of-type(2)::after {
     display: none;
   }
 }
