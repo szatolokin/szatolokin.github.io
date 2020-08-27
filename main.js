@@ -107,7 +107,7 @@ function form(inputSelector, submitSelector) {
 function tooltips(tooltips) {
   for (let i = 0; i < tooltips.length; i++) {
     $(tooltips[i]).tooltipster({
-      theme: ""
+      theme: "tooltipster-shadow"
     });
   }
 }
