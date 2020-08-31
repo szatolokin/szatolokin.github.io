@@ -56,9 +56,12 @@ html {
 *::before,
 *::after {
   box-sizing: inherit;
-  outline: none;
   margin: 0;
   padding: 0;
+}
+
+*:focus {
+  outline: none;
 }
 
 img {
