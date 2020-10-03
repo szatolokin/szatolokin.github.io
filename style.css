@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /*     padding: 20px; */
+  min-height: 100vh;
+}
+
+.chess-board {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(8, calc(100% / 8));
+  grid-template-rows: repeat(8, calc(100% / 8));
+  border: 1px solid black;
+}
+
+.chess-cell {
+  transition: 0.25s;
+}
+
+.chess-cell.white {
+  background: white;
+}
+
+.chess-cell.black {
+  background: black;
+}
+
+.chess-cell.select {
+  background: lightblue;
+}
+
+.chess-cell.highlight {
+  background: green;
+}
